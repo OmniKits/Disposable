@@ -37,10 +37,10 @@ namespace $rootnamespace$
             if (disposing)
                 _IsDisposeExactlyInvoked = true;
 
-    #pragma warning disable 0420
+#pragma warning disable 0420
             if (Interlocked.Exchange(ref _IsDisposeTriggered, 1) != 0)
                 return;
-    #pragma warning restore 0420
+#pragma warning restore 0420
 
             Dispose(disposing);
 
@@ -56,7 +56,7 @@ namespace $rootnamespace$
         void IDisposable.Dispose()
             => Dispose();
 
-    #pragma warning disable 1591
+#pragma warning disable 1591
         ~DisposableBase()
         {
             FireDispose(false);
