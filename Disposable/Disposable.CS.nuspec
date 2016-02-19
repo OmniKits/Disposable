@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
     <metadata>
-        <id>Disposable</id>
+        <id>Disposable.CS</id>
         <version>0.0.0</version>
         <authors>Licshee</authors>
-        <projectUrl>https://github.com/NanaLich/Disposable</projectUrl>
+        <projectUrl>https://github.com/OmniKits/Disposable</projectUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>A thread-safe IDisposable implementation which is easy to use.</description>
     </metadata>
