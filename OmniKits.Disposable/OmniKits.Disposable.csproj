@@ -39,16 +39,16 @@
     <Compile Include="DisposableBase.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <Folder Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="LockZone, Version=0.0.0.0, Culture=neutral, PublicKeyToken=7af88464decbdfc7, processorArchitecture=MSIL">
-      <HintPath>..\packages\LockZone.0.0\lib\portable-net4+sl5+win8+wp8+wpa+dnxcore\LockZone.dll</HintPath>
+    <Reference Include="LockZone, Version=0.1.0.0, Culture=neutral, PublicKeyToken=7af88464decbdfc7, processorArchitecture=MSIL">
+      <HintPath>..\packages\LockZone.0.1-a\lib\portable-net4+sl5+win8+wp8+wpa+dnxcore\LockZone.dll</HintPath>
       <Private>True</Private>
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Properties\" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

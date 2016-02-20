@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/10/nuspec.xsd">
+    <metadata>
+        <id>Disposable</id>
+        <version>0.0</version>
+        <authors>Licshee</authors>
+        <projectUrl>https://github.com/OmniKits/Disposable</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>A thread-safe IDisposable implementation which is easy to use.</description>
+        <dependencies>
+            <dependency id="LockZone" version="0.1-a" />
+        </dependencies>
+    </metadata>
+    <files>
+        <file src="OmniKits.Disposable.dll" target="lib\portable-net4+sl5+win8+wp8+wpa+dnxcore\OmniKits.Disposable.dll" />
+        <file src="OmniKits.Disposable.XML" target="lib\portable-net4+sl5+win8+wp8+wpa+dnxcore\OmniKits.Disposable.XML" />
+    </files>
+</package>

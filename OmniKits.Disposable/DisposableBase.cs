@@ -20,8 +20,17 @@ namespace OmniKits
         public DisposableBase(bool? useReaderWriterLockForDisposing)
         {
             _UseReaderWriterLock = useReaderWriterLockForDisposing;
-            if (UseLockForDisposing)
+            if (!UseLockForDisposing)
+                return;
+
+            if (_UseReaderWriterLock.Value)
                 _LockZone = ReaderWriterLockZone.Spawn();
+            else
+            {
+                var @lock = new DisposableLock();
+                _LockZone.UnderlaidReaderLock = @lock;
+                _LockZone.UnderlaidWriterLock = @lock;
+            }
         }
         public DisposableBase()
             : this(null)
@@ -51,7 +60,7 @@ namespace OmniKits
         protected abstract void Dispose(bool disposing);
 
         private LinkedList<IDisposable> _DisposableList = null;
-        private void AlsoDisposeCore(IDisposable target)
+        private void AggressiveDisposeableCore(IDisposable target)
         {
             if (_DisposableList == null)
                 _DisposableList = new LinkedList<IDisposable>();
@@ -60,15 +69,18 @@ namespace OmniKits
         /// <summary>
         /// Add a depended IDisposable object to FILO recursive disposing list.
         /// </summary>
-        protected void AlsoDispose(IDisposable target)
+        protected T AggressiveDisposeable<T>(T target)
+            where T : IDisposable
         {
             if (!UseLockForDisposing)
-                AlsoDisposeCore(target);
+                AggressiveDisposeableCore(target);
             else
             {
                 using (_LockZone.WriterLocking())
-                    AlsoDisposeCore(target);
+                    AggressiveDisposeableCore(target);
             }
+
+            return target;
         }
 
         private void RecursiveDispose(bool disposing)
