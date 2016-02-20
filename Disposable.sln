@@ -10,6 +10,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		Disposable\DisposableBase.cs.pp = Disposable\DisposableBase.cs.pp
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OmniKits.Disposable", "OmniKits.Disposable\OmniKits.Disposable.csproj", "{2F62E8E6-369F-4BAD-B504-549FC95C273A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,6 +22,10 @@ Global
 		{875B6A12-28E6-4D76-8006-028F5D621164}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{875B6A12-28E6-4D76-8006-028F5D621164}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{875B6A12-28E6-4D76-8006-028F5D621164}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F62E8E6-369F-4BAD-B504-549FC95C273A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F62E8E6-369F-4BAD-B504-549FC95C273A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F62E8E6-369F-4BAD-B504-549FC95C273A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F62E8E6-369F-4BAD-B504-549FC95C273A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
